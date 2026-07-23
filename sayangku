@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Widia 💖</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(180deg,#ffd6e7,#fff0f7);
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+overflow:hidden;
+}
+
+.box{
+width:90%;
+max-width:700px;
+background:white;
+padding:30px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+button{
+background:#ff4f8b;
+color:white;
+border:none;
+padding:15px 30px;
+border-radius:50px;
+font-size:18px;
+cursor:pointer;
+margin-top:20px;
+}
+
+#page2{
+display:none;
+}
+
+img{
+width:100%;
+border-radius:20px;
+margin-top:15px;
+}
+
+.heart{
+position:fixed;
+top:-30px;
+animation:fall 4s linear forwards;
+font-size:24px;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh);
+opacity:0;
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box" id="page1">
+
+<h1>🎂 Hai Sayangku Widia 🤍</h1>
+
+<p>
+
+Aku punya hadiah kecil yang kubuat khusus untuk kamu.
+
+</p>
+
+<button id="openBtn">
+
+Buka Hadiah 🎁
+
+</button>
+
+</div>
+
+<div class="box" id="page2">
+
+<h1>💖 Selamat Ulang Tahun Sayangku 💖</h1>
+
+<p>
+
+Selamat ulang tahun ya sayang.
+
+Semoga kamu selalu sehat.
+
+Selalu bahagia.
+
+Selalu dikelilingi orang-orang baik.
+
+Semoga semua cita-cita dan impianmu tercapai.
+
+Terima kasih sudah hadir di hidupku.
+
+Terima kasih sudah menjadi alasan aku tersenyum.
+
+Aku memang belum sempurna.
+
+Tapi aku akan selalu berusaha menjadi yang terbaik buat kamu.
+
+Aku berharap kita bisa terus bersama sampai nanti.
+
+Aku sayang banget sama kamu.
+
+Hari ini.
+
+Besok.
+
+Dan selamanya.
+
+❤️
+
+</p>
+
+<button id="loveBtn">
+
+Peluk Virtual 🤍
+
+</button>
+
+<h2 id="loveText" style="display:none;color:#ff4f8b">
+
+❤️ AKU SAYANG KAMU SELAMANYA WIDIA ❤️
+
+</h2>
+
+</div>
+
+<script>
+
+function hearts(){
+
+for(let i=0;i<60;i++){
+
+let h=document.createElement("div");
+
+h.className="heart";
+
+h.innerHTML="💖";
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.fontSize=(20+Math.random()*20)+"px";
+
+document.body.appendChild(h);
+
+setTimeout(()=>{
+
+h.remove();
+
+},4000);
+
+}
+
+}
+
+document.getElementById("openBtn").onclick=function(){
+
+document.getElementById("page1").style.display="none";
+
+document.getElementById("page2").style.display="block";
+
+hearts();
+
+}
+
+document.getElementById("loveBtn").onclick=function(){
+
+document.getElementById("loveText").style.display="block";
+
+hearts();
+
+}
+
+</script>
+
+</body>
+</html>
